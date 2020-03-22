@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="" />
+    <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="Server class added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,12 +48,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584874249820</updated>
-      <workItem from="1584874255170" duration="2183000" />
+      <workItem from="1584874255170" duration="2388000" />
     </task>
+    <task id="LOCAL-00001" summary="Server class added">
+      <created>1584882778960</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584882778979</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Server class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server class added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="199" y="207" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1584874385787">
@@ -62,10 +76,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874957925" />
-    <state x="105" y="115" key="CommitChangelistDialog2" timestamp="1584874941120">
+    <state x="105" y="115" key="CommitChangelistDialog2" timestamp="1584882895096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="105" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584874941120" />
+    <state x="105" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584882895096" />
     <state x="0" y="139" key="new project wizard" timestamp="1584874311983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
