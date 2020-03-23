@@ -1,4 +1,4 @@
-# FTP-Server
+# FTP-Server.Server
 Projekat iz Računarskih mreža
 
 # I Faza
