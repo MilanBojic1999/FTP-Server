@@ -1,5 +1,7 @@
 package Server;
 
+import Server.FileOperator.FileLister;
+
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
@@ -9,6 +11,7 @@ class Server {
 
     private List<User> users;
     private Socket socket;
+    private FileLister lister;
 
     public Server() throws Exception{
         utilInit();
@@ -64,6 +67,7 @@ class Server {
                     out.println("Get command");
                     break;
                 case "put":
+                    put();
                     out.println("Put command");
                     break;
                 case "quit":
@@ -84,12 +88,15 @@ class Server {
     }
 
     private void put(){
-
+        for(String name:lister.listFiles()){
+            System.out.println("->"+name);
+        }
     }
 
     private void utilInit(){
         users=new ArrayList<>();
         users.add(new User("Pera","1234"));
+        lister=new FileLister();
     }
 
     public static void main(String[] args) {
