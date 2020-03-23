@@ -8,6 +8,7 @@ import java.util.List;
 class Server {
 
     private List<User> users;
+    private Socket socket;
 
     public Server() throws Exception{
         utilInit();
@@ -16,7 +17,11 @@ class Server {
         ServerSocket serverTransferSocket=new ServerSocket(20);
         Socket connectSocket;
         while (true) {
-            connectSocket(serverConnectionSocket.accept());
+            if(connectSocket(serverConnectionSocket.accept())){
+                socket=serverTransferSocket.accept();
+                transferSocket(socket);
+                socket.close();
+            }
         }
 
 
@@ -47,8 +52,29 @@ class Server {
         return true;
     }
 
-    private boolean transferSocket(Socket socket){
+    private boolean transferSocket(Socket socket) throws IOException{
+        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
+        boolean flag=false;
+        do {
+            out.println("ftp> ");
+            String comm = in.readLine();
+            switch (comm) {
+                case "get":
+                    out.println("Get command");
+                    break;
+                case "put":
+                    out.println("Put command");
+                    break;
+                case "quit":
+                    out.println("Quiting...");
+                    flag = true;
+                    break;
+                default:
+                    out.println("Unknown command");
+            }
 
+        } while (!flag);
 
         return false;
     }
