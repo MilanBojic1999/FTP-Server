@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available">
+    <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTP protocol.md" beforeDir="false" afterPath="$PROJECT_DIR$/FTP protocol.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584874249820</updated>
       <workItem from="1584874255170" duration="3234000" />
-      <workItem from="1584951932829" duration="6854000" />
+      <workItem from="1584951932829" duration="7672000" />
     </task>
     <task id="LOCAL-00001" summary="Server class added">
       <created>1584882778960</created>
@@ -117,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584958913203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available&#10;Small Client added">
+      <created>1584963630823</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584963630823</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +144,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Server class added" />
     <MESSAGE value="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available" />
-    <option name="LAST_COMMIT_MESSAGE" value="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available" />
+    <MESSAGE value="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available&#10;Small Client added" />
+    <option name="LAST_COMMIT_MESSAGE" value="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available&#10;Small Client added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584883072873">
@@ -158,10 +164,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874957925" />
-    <state x="994" y="102" key="CommitChangelistDialog2" timestamp="1584963601672">
+    <state x="994" y="102" key="CommitChangelistDialog2" timestamp="1584964472707">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="994" y="102" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584963601672" />
+    <state x="994" y="102" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584964472707" />
     <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1584963601737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

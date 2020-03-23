@@ -1,9 +1,6 @@
 package Server;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,25 +16,7 @@ class Server {
         ServerSocket serverTransferSocket=new ServerSocket(20);
         Socket connectSocket;
         while (true) {
-            connectSocket = serverConnectionSocket.accept();
-
-            BufferedReader in = new BufferedReader(new InputStreamReader(connectSocket.getInputStream()));
-            PrintWriter out = new PrintWriter(new OutputStreamWriter(connectSocket.getOutputStream()), true);
-
-            out.println("Log in please!!!");
-            User dummy = new User("1", "1");
-            while (true) {
-                out.println("Enter username: ");
-                dummy.setUsername(in.readLine());
-                out.println("Enter password: ");
-                dummy.setPassword(in.readLine());
-                if (users.contains(dummy)) {
-                    out.println("Welcome to server");
-                    break;
-                } else {
-                    out.println("Wrong information");
-                }
-            }
+            connectSocket(serverConnectionSocket.accept());
         }
 
 
@@ -45,7 +24,36 @@ class Server {
 
     }
 
-    void utilInit(){
+    private boolean connectSocket(Socket socket) throws IOException {
+
+        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
+
+        out.println("Log in please!!!");
+        User dummy = new User("1", "1");
+        while (true) {
+            out.println("Enter username: ");
+            dummy.setUsername(in.readLine());
+            out.println("Enter password: ");
+            dummy.setPassword(in.readLine());
+            if (users.contains(dummy)) {
+                out.println("Welcome to server");
+                break;
+            } else {
+                out.println("Wrong information");
+            }
+        }
+
+        return true;
+    }
+
+    private boolean transferSocket(Socket socket){
+
+
+        return false;
+    }
+
+    private void utilInit(){
         users=new ArrayList<>();
         users.add(new User("Pera","1234"));
     }
