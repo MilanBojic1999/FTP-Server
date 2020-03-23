@@ -40,7 +40,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.Client" />
       <module name="FTP-Server" />
@@ -85,7 +85,9 @@
       <option name="presentableId" value="Default" />
       <updated>1584874249820</updated>
       <workItem from="1584874255170" duration="3234000" />
-      <workItem from="1584951932829" duration="7672000" />
+      <workItem from="1584951932829" duration="7872000" />
+      <workItem from="1584981932811" duration="45000" />
+      <workItem from="1584982182919" duration="943000" />
     </task>
     <task id="LOCAL-00001" summary="Server class added">
       <created>1584882778960</created>
@@ -122,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584963630823</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Small change for connection to port 21&#10;Method for transfer socket in work...">
+      <created>1584964536447</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584964536447</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +154,8 @@
     <MESSAGE value="Server class added" />
     <MESSAGE value="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available" />
     <MESSAGE value="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available&#10;Small Client added" />
-    <option name="LAST_COMMIT_MESSAGE" value="User added&#10;ConnectionSocket(port 21) is connected&#10;Logging in is available&#10;Small Client added" />
+    <MESSAGE value="Small change for connection to port 21&#10;Method for transfer socket in work..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Small change for connection to port 21&#10;Method for transfer socket in work..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584883072873">
@@ -164,38 +174,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874957925" />
-    <state x="994" y="102" key="CommitChangelistDialog2" timestamp="1584964472707">
+    <state x="994" y="102" key="CommitChangelistDialog2" timestamp="1584964535753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="994" y="102" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584964472707" />
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1584963601737">
+    <state x="994" y="102" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584964535753" />
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1584983927709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584963601737" />
-    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1584963601737">
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584983927709" />
+    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1584983927709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584963601737" />
-    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1584963601737">
+    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584983927709" />
+    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1584983927709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584963601737" />
-    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1584963601737">
+    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584983927709" />
+    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1584983927709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584963601737" />
-    <state x="72" y="251" key="Vcs.Push.Dialog.v2" timestamp="1584883250990">
+    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584983927709" />
+    <state x="72" y="251" key="Vcs.Push.Dialog.v2" timestamp="1584964546888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584883250990" />
-    <state x="175" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1584951952677">
+    <state x="72" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584964546888" />
+    <state x="175" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1584982186551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="175" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584951952677" />
-    <state x="289" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584883001269">
+    <state x="175" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584982186551" />
+    <state x="289" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584964587802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="289" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584883001269" />
+    <state x="289" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584964587802" />
     <state x="0" y="139" key="new project wizard" timestamp="1584874311983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

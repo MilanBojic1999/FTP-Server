@@ -36,7 +36,7 @@ class Server {
             dummy.setUsername(in.readLine());
             out.println("Enter password: ");
             dummy.setPassword(in.readLine());
-            if (users.contains(dummy)) {
+            if (users.contains(dummy) || dummy.getUsername().equalsIgnoreCase("anonymous")) {
                 out.println("Welcome to server");
                 break;
             } else {
@@ -51,6 +51,14 @@ class Server {
 
 
         return false;
+    }
+
+    private File get(){
+        return null;
+    }
+
+    private void put(){
+
     }
 
     private void utilInit(){
