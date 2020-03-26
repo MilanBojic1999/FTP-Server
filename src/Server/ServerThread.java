@@ -1,15 +1,16 @@
 package Server;
 
 import java.io.*;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
 
 public class ServerThread implements Runnable{
     private Socket connectSocket;
-    private Socket transferSocket;
+    private ServerSocket transferSocket;
     private List<User> users;
 
-    public ServerThread(Socket connectSocket, Socket transferSocket, List<User> users) {
+    public ServerThread(Socket connectSocket,ServerSocket transferSocket, List<User> users) {
         this.connectSocket = connectSocket;
         this.transferSocket = transferSocket;
         this.users = users;
@@ -29,13 +30,12 @@ public class ServerThread implements Runnable{
             dummy.setPassword(in.readLine());
             if (users.contains(dummy) || dummy.getUsername().equalsIgnoreCase("anonymous")) {
                 out.println("Welcome to server");
-                break;
+                return true;
             } else {
                 out.println("Wrong information");
             }
         }
 
-        return true;
     }
 
     private boolean transferSocket(Socket socket) throws IOException{
@@ -45,6 +45,7 @@ public class ServerThread implements Runnable{
         do {
             out.println("ftp> ");
             String comm = in.readLine();
+            System.out.println("Client wants to "+comm);
             switch (comm) {
                 case "get":
                     out.println("Get command");
@@ -61,12 +62,20 @@ public class ServerThread implements Runnable{
             }
 
         } while (!flag);
-
+        socket.close();
         return false;
     }
 
     @Override
     public void run() {
-
+        try{
+            if(connectSocket(connectSocket))
+                transferSocket(transferSocket.accept());
+                System.out.println("into de");
+            connectSocket.close();
+            //transferSocket.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

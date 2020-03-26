@@ -10,13 +10,21 @@ import java.util.List;
 class Server {
 
     private List<User> users;
-    private Socket socket;
     private FileLister lister;
 
     public Server() throws Exception{
         utilInit();
         ServerSocket csSocket=new ServerSocket(21);
         ServerSocket tsSocket=new ServerSocket(20);
+        System.out.println("Server buted up");
+        while (true){
+            Socket socket=csSocket.accept();
+
+            ServerThread st=new ServerThread(socket,tsSocket,users);
+            Thread th=new Thread(st);
+            th.start();
+        }
+
     }
 
 
