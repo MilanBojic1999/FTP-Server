@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
       <workItem from="1584982182919" duration="3006000" />
       <workItem from="1585000040968" duration="769000" />
       <workItem from="1585165760238" duration="1774000" />
-      <workItem from="1585251523974" duration="1333000" />
+      <workItem from="1585251523974" duration="1661000" />
     </task>
     <task id="LOCAL-00001" summary="Server class added">
       <created>1584882778960</created>
@@ -169,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585174283757</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Server Thread class added">
+      <created>1585252926508</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585252926509</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,10 +222,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874957925" />
-    <state x="994" y="102" key="CommitChangelistDialog2" timestamp="1585174281680">
+    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585252925450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="994" y="102" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585174281680" />
+    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585252925450" />
+    <state x="253" y="385" key="Github.CreatePullRequestDialog" timestamp="1585253205777">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="253" y="385" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585253205777" />
     <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1585000824796">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -236,10 +246,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585000824796" />
-    <state x="72" y="251" key="Vcs.Push.Dialog.v2" timestamp="1585174310265">
+    <state x="72" y="251" key="Vcs.Push.Dialog.v2" timestamp="1585253316558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585174310265" />
+    <state x="72" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585253316558" />
     <state x="175" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585251524450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
