@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="Client class added into project">
+    <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/FileClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/FileClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +98,7 @@
       <workItem from="1585165760238" duration="1774000" />
       <workItem from="1585251523974" duration="5587000" />
       <workItem from="1585305034919" duration="86000" />
-      <workItem from="1585309554191" duration="4933000" />
+      <workItem from="1585309554191" duration="5432000" />
     </task>
     <task id="LOCAL-00001" summary="Server class added">
       <created>1584882778960</created>
@@ -214,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585305125624</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Client can sand files and receive if from server">
+      <created>1585314940899</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585314940899</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +249,8 @@
     <MESSAGE value="Server Thread class added" />
     <MESSAGE value="Server Thread class added,and is usable" />
     <MESSAGE value="Client class added into project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Client class added into project" />
+    <MESSAGE value="Client can sand files and receive if from server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client can sand files and receive if from server" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584883072873">
@@ -263,10 +269,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874957925" />
-    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585314894993">
+    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585314939526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585314894993" />
+    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585314939526" />
     <state x="253" y="385" key="Github.CreatePullRequestDialog" timestamp="1585253205777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -315,6 +321,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="289" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585252885953" />
+    <state x="210" y="284" key="extract.method.dialog" timestamp="1585315379909">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="210" y="284" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585315379909" />
     <state x="0" y="139" key="new project wizard" timestamp="1584874311983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

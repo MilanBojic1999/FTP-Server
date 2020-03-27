@@ -10,8 +10,7 @@ public class FileClient {
     }
 
     public boolean send(File file){
-        int bread=0;
-        int curr=0;
+
         byte[] sanding=new byte[(int)file.length()];
         try{
             FileInputStream fis=new FileInputStream(file);
