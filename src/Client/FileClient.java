@@ -38,20 +38,29 @@ public class FileClient {
         try {
             InputStream is=socket.getInputStream();
             BufferedReader in=new BufferedReader(new InputStreamReader(is));
-            String name=in.readLine();
+
+            //Dobijanje meta podataka o fajlu
+            String fullname=in.readLine();
             long size=Long.parseLong(in.readLine());
-            System.out.println("Getting File: "+name+" with size: "+size+" bytes");
-            File nFile=new File("ClientsFiles"+File.separator+name);
+            String[] fullnameParts=fullname.split("/"); //deli dobijenu putanju na imenea direktorijuma
+            String name=fullnameParts[fullnameParts.length-1]; // ovo je poslednji deo putanje, odnosno ime fajla
+
+
+            System.out.println("Getting File: "+fullname+" with size: "+size+" bytes");
+            File nFile;
+            nFile=new File("ClientsFiles"+File.separator+name);
+
             int i=1;
             //Ovde sistem pokušava da napraci novi fajl, ako fajl sa istim imenom postoji
             //Pravi se fajl sa inkrementiranom brojnom vrednošću dodato uz originalno ime
-            if(!nFile.createNewFile())
-                System.out.println("File already exist");
+            if(!nFile.createNewFile()) {
+                nFile=new File("ClientsFiles"+File.separator+name+"("+ (i++) +")"+".txt");
+            }
             byte[] inBuff=new byte[(int) size+64];
 
             BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(nFile));
 
-            int byteRead=0;
+            int byteRead;
             byteRead=is.read(inBuff,0,inBuff.length);
             bos.write(inBuff,0,byteRead);
             bos.flush();

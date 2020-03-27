@@ -17,7 +17,7 @@ public class FileHandler {
             if(!inFile.createNewFile())
                 System.out.println("Overwriting file");
 
-            int byteRead=0;
+            int byteRead;
 
             byte[] inBuff=new byte[size+32];
 
@@ -37,7 +37,11 @@ public class FileHandler {
 
     public boolean get(Socket socket,String name){
         try{
-            File file=new File("ServerFiles"+File.separator+name);
+            File file;
+            if(name.split("/").length<2)
+                file=new File("ServerFiles"+File.separator+name);
+            else
+                file=new File(name);
             System.out.println(file.getAbsoluteFile());
             if(!file.exists())
                 return false;
