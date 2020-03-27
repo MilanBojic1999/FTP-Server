@@ -66,6 +66,11 @@ public class ServerThread implements Runnable{
         return false;
     }
 
+    public boolean get(Socket socket){
+
+        return true;
+    }
+
     @Override
     public void run() {
         try{

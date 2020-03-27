@@ -29,18 +29,6 @@ class Server {
 
 
 
-
-
-    private File get(){
-        return null;
-    }
-
-    private void put(){
-        for(String name:lister.listFiles()){
-            System.out.println("->"+name);
-        }
-    }
-
     private void utilInit(){
         users=new ArrayList<>();
         users.add(new User("Pera","1234"));

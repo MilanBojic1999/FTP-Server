@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class Client {
 
+    FileClient filler;
+
     public Client() throws Exception{
         Socket socket=new Socket("192.168.1.10",21);
 
