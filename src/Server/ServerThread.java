@@ -1,5 +1,7 @@
 package Server;
 
+import Server.FileOperator.FileHandler;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -9,18 +11,18 @@ public class ServerThread implements Runnable{
     private Socket connectSocket;
     private ServerSocket transferSocket;
     private List<User> users;
-
+    private FileHandler filler;
     public ServerThread(Socket connectSocket,ServerSocket transferSocket, List<User> users) {
         this.connectSocket = connectSocket;
         this.transferSocket = transferSocket;
         this.users = users;
+        filler=new FileHandler();
     }
 
     private boolean connectSocket(Socket socket) throws IOException {
 
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
-
         out.println("Log in please!!!");
         User dummy = new User("1", "1");
         while (true) {
@@ -30,6 +32,7 @@ public class ServerThread implements Runnable{
             dummy.setPassword(in.readLine());
             if (users.contains(dummy) || dummy.getUsername().equalsIgnoreCase("anonymous")) {
                 out.println("Welcome to server");
+                System.out.println("New clint");
                 return true;
             } else {
                 out.println("Wrong information");
@@ -44,14 +47,22 @@ public class ServerThread implements Runnable{
         boolean flag=false;
         do {
             out.println("ftp> ");
-            String comm = in.readLine();
+            String info = in.readLine();
+            String[] comms=info.split(" ");
+            String comm=comms[0];
+            StringBuilder fileName= new StringBuilder();
+            for(int i=1;i<comms.length;++i)
+                fileName.append(comms[i]);
             System.out.println("Client wants to "+comm);
             switch (comm) {
                 case "get":
                     out.println("Get command");
+                    filler.get(socket, fileName.toString());
+                    System.out.println("gsg");
                     break;
                 case "put":
                     out.println("Put command");
+                    filler.put(socket);
                     break;
                 case "quit":
                     out.println("Quiting...");

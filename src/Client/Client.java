@@ -31,21 +31,33 @@ public class Client {
         }while (!(msg=in.readLine()).equals("Welcome to server"));
         System.out.println(msg);
 
-        socket=new Socket("192.168.1.10",20);
+        Socket tsocket=new Socket("192.168.1.10",20);
 
-        in=new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        out=new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
-
+        BufferedReader tin=new BufferedReader(new InputStreamReader(tsocket.getInputStream()));
+        PrintWriter tout=new PrintWriter(new OutputStreamWriter(tsocket.getOutputStream()),true);
+        filler=new FileClient(tsocket);
         do{
-            System.out.print(in.readLine());
+            System.out.print(tin.readLine());
             info=sc.nextLine();
-            out.println(info);
-            msg=in.readLine();
+            if(info.length()<1)
+                continue;
+            String[] comms=info.split(" ");
+            System.out.println("->"+info);
+            tout.println(info);
+            msg=tin.readLine();
+            if(comms[0].equalsIgnoreCase("put")){
+                filler.send(new File(comms[1]));
+            }else if(comms[0].equalsIgnoreCase("get")){
+                filler.receive();
+            }
+
             System.out.println(msg);
         }while (!msg.equals("Quiting..."));
 
         sc.close();
+        tsocket.close();
         socket.close();
+
     }
 
 

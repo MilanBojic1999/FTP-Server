@@ -39,8 +39,12 @@ public class FileHandler {
         return true;
     }
 
-    public boolean get(Socket socket,File file){
+    public boolean get(Socket socket,String name){
         try{
+            File file=new File("ServerFiles"+File.separator+name);
+            System.out.println(file.getAbsoluteFile());
+            if(!file.exists())
+                return false;
             byte[] sanding=new byte[(int)file.length()];
 
             FileInputStream fis=new FileInputStream(file);
