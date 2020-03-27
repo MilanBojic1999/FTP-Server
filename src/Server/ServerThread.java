@@ -12,6 +12,8 @@ public class ServerThread implements Runnable{
     private ServerSocket transferSocket;
     private List<User> users;
     private FileHandler filler;
+    private BufferedReader in;
+    private PrintWriter out;
     public ServerThread(Socket connectSocket,ServerSocket transferSocket, List<User> users) {
         this.connectSocket = connectSocket;
         this.transferSocket = transferSocket;
@@ -21,8 +23,8 @@ public class ServerThread implements Runnable{
 
     private boolean connectSocket(Socket socket) throws IOException {
 
-        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
+        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
         out.println("Log in please!!!");
         User dummy = new User("1", "1");
         while (true) {
@@ -42,8 +44,8 @@ public class ServerThread implements Runnable{
     }
 
     private boolean transferSocket(Socket socket) throws IOException{
-        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
+        //BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        //PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
         boolean flag=false;
         do {
             out.println("ftp> ");

@@ -18,17 +18,13 @@ public class FileHandler {
                 System.out.println("Overwriting file");
 
             int byteRead=0;
-            int curr=0;
+
             byte[] inBuff=new byte[size+32];
 
             BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(inFile));
-            do{
-                byteRead=is.read(inBuff,curr,(inBuff.length-curr));
-                if(byteRead>=0)
-                    curr+=byteRead;
-            }while (byteRead>-1);
 
-            bos.write(inBuff,0,curr);
+            byteRead=is.read(inBuff,0,inBuff.length);
+            bos.write(inBuff,0,byteRead);
             bos.flush();
             System.out.println("Writen into file "+inFile.getName());
 

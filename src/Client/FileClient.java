@@ -9,13 +9,14 @@ public class FileClient {
         this.socket = socket;
     }
 
-    public boolean send(File file){
+    public boolean send(String filename){
 
-        byte[] sanding=new byte[(int)file.length()];
         try{
+            File file=new File(filename);
+            byte[] sanding=new byte[(int)file.length()];
+
             FileInputStream fis=new FileInputStream(file);
             BufferedInputStream bis=new BufferedInputStream(fis);
-            //PrintWriter in=new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
             bis.read(sanding,0,sanding.length);
 
             OutputStream os=socket.getOutputStream();

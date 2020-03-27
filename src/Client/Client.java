@@ -33,20 +33,20 @@ public class Client {
 
         Socket tsocket=new Socket("192.168.1.10",20);
 
-        BufferedReader tin=new BufferedReader(new InputStreamReader(tsocket.getInputStream()));
-        PrintWriter tout=new PrintWriter(new OutputStreamWriter(tsocket.getOutputStream()),true);
+        //BufferedReader tin=new BufferedReader(new InputStreamReader(tsocket.getInputStream()));
+        //PrintWriter tout=new PrintWriter(new OutputStreamWriter(tsocket.getOutputStream()),true);
         filler=new FileClient(tsocket);
         do{
-            System.out.print(tin.readLine());
+            System.out.print(in.readLine());
             info=sc.nextLine();
             if(info.length()<1)
                 continue;
             String[] comms=info.split(" ");
             System.out.println("->"+info);
-            tout.println(info);
-            msg=tin.readLine();
+            out.println(info);
+            msg=in.readLine();
             if(comms[0].equalsIgnoreCase("put")){
-                filler.send(new File(comms[1]));
+                filler.send(comms[1]);
             }else if(comms[0].equalsIgnoreCase("get")){
                 filler.receive();
             }
