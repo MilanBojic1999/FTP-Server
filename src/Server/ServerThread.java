@@ -14,6 +14,7 @@ public class ServerThread implements Runnable{
     private FileHandler filler;
     private BufferedReader in;
     private PrintWriter out;
+
     public ServerThread(Socket connectSocket,ServerSocket transferSocket, List<User> users) {
         this.connectSocket = connectSocket;
         this.transferSocket = transferSocket;
@@ -69,6 +70,10 @@ public class ServerThread implements Runnable{
                 case "quit":
                     out.println("Quiting...");
                     flag = true;
+                    break;
+                case "list":
+                    out.println("List command");
+                    filler.list(connectSocket);
                     break;
                 default:
                     out.println("Unknown command");

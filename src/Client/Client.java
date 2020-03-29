@@ -42,13 +42,18 @@ public class Client {
             if(info.length()<1)
                 continue;
             String[] comms=info.split(" ");
-            System.out.println("->"+info);
+            //System.out.println("->"+info);
             out.println(info);
             msg=in.readLine();
             if(comms[0].equalsIgnoreCase("put")){
                 filler.send(comms[1]);
             }else if(comms[0].equalsIgnoreCase("get")){
                 filler.receive();
+            }else if(comms[0].equalsIgnoreCase("list")) {
+                //System.out.println(in.readLine());
+                int size=Integer.parseInt(in.readLine());
+                for(int i=0;i<size;++i)
+                    System.out.println("-"+in.readLine());
             }
 
             System.out.println(msg);

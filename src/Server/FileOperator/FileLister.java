@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class FileLister {
-    List<String> filesNames;
+    private List<String> filesNames;
 
     public FileLister() {
         filesNames=new ArrayList<>();

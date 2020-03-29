@@ -2,9 +2,14 @@ package Server.FileOperator;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.List;
 
 public class FileHandler {
+    private FileLister lister;
 
+    public FileHandler() {
+        lister=new FileLister();
+    }
 
     public boolean put(Socket socket){
         try {
@@ -64,5 +69,18 @@ public class FileHandler {
         }
 
         return true;
+    }
+
+    public void list(Socket socket){
+        try {
+            List<String> list=lister.listFiles();
+            PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
+            out.println(list.size());
+            for(String str:list)
+                out.println(str);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
