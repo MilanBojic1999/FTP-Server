@@ -75,6 +75,11 @@ public class ServerThread implements Runnable{
                     out.println("List command");
                     filler.list(connectSocket);
                     break;
+                case "delete":
+                    out.println("Delete command");
+                    if (filler.delete(socket,fileName.toString()))
+                        System.out.println("File deleted");
+                    break;
                 default:
                     out.println("Unknown command");
             }

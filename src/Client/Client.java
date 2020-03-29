@@ -42,7 +42,6 @@ public class Client {
             if(info.length()<1)
                 continue;
             String[] comms=info.split(" ");
-            //System.out.println("->"+info);
             out.println(info);
             msg=in.readLine();
             if(comms[0].equalsIgnoreCase("put")){
@@ -50,7 +49,6 @@ public class Client {
             }else if(comms[0].equalsIgnoreCase("get")){
                 filler.receive();
             }else if(comms[0].equalsIgnoreCase("list")) {
-                //System.out.println(in.readLine());
                 int size=Integer.parseInt(in.readLine());
                 for(int i=0;i<size;++i)
                     System.out.println("-"+in.readLine());

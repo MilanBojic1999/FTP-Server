@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerFiles/File1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Client/FileClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Client/FileClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Server/FileOperator/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Server/FileOperator/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Server/FileOperator/FileLister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Server/FileOperator/FileLister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Server/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Server/ServerThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/FileOperator/FileLister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/FileOperator/FileLister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +108,7 @@
       <workItem from="1585309554191" duration="9578000" />
       <workItem from="1585329694801" duration="4310000" />
       <workItem from="1585420337935" duration="848000" />
-      <workItem from="1585472815914" duration="1442000" />
+      <workItem from="1585472815914" duration="2576000" />
     </task>
     <task id="LOCAL-00001" summary="Server class added">
       <created>1584882778960</created>
@@ -259,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585420613140</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="List command implemented">
+      <created>1585474450715</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1585474450715</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +305,8 @@
     <MESSAGE value="Client can send files and receive if from server&#10;Server can send files" />
     <MESSAGE value="Client can send files and receive it from server&#10;Server can send files and receive them" />
     <MESSAGE value="Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
+    <MESSAGE value="List command implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="List command implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584883072873">
@@ -316,46 +329,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874957925" />
-    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585420610654">
+    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585474447374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585420610654" />
+    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585474447374" />
     <state x="253" y="385" key="Github.CreatePullRequestDialog" timestamp="1585253205777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="253" y="385" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585253205777" />
-    <state width="900" height="271" key="GridCell.Tab.0.bottom" timestamp="1585474317741">
+    <state width="900" height="271" key="GridCell.Tab.0.bottom" timestamp="1585475396588">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585474317741" />
-    <state width="900" height="271" key="GridCell.Tab.0.center" timestamp="1585474317741">
+    <state width="900" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585475396588" />
+    <state width="900" height="271" key="GridCell.Tab.0.center" timestamp="1585475396587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585474317741" />
-    <state width="900" height="271" key="GridCell.Tab.0.left" timestamp="1585474317740">
+    <state width="900" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585475396587" />
+    <state width="900" height="271" key="GridCell.Tab.0.left" timestamp="1585475396587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585474317740" />
-    <state width="900" height="271" key="GridCell.Tab.0.right" timestamp="1585474317741">
+    <state width="900" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585475396587" />
+    <state width="900" height="271" key="GridCell.Tab.0.right" timestamp="1585475396587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585474317741" />
-    <state width="900" height="335" key="GridCell.Tab.1.bottom" timestamp="1585319063789">
+    <state width="900" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585475396587" />
+    <state width="900" height="335" key="GridCell.Tab.1.bottom" timestamp="1585475353413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="335" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585319063789" />
-    <state width="900" height="335" key="GridCell.Tab.1.center" timestamp="1585319063789">
+    <state width="900" height="335" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585475353413" />
+    <state width="900" height="335" key="GridCell.Tab.1.center" timestamp="1585475353413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="335" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585319063789" />
-    <state width="900" height="335" key="GridCell.Tab.1.left" timestamp="1585319063789">
+    <state width="900" height="335" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585475353413" />
+    <state width="900" height="335" key="GridCell.Tab.1.left" timestamp="1585475353413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="335" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585319063789" />
-    <state width="900" height="335" key="GridCell.Tab.1.right" timestamp="1585319063789">
+    <state width="900" height="335" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585475353413" />
+    <state width="900" height="335" key="GridCell.Tab.1.right" timestamp="1585475353413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="335" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585319063789" />
+    <state width="900" height="335" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585475353413" />
     <state x="72" y="251" key="Vcs.Push.Dialog.v2" timestamp="1585332724866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -376,13 +389,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="139" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1584874311983" />
-    <state x="136" y="235" width="672" height="677" key="run.anything.popup" timestamp="1585257683677">
+    <state x="136" y="235" width="672" height="677" key="run.anything.popup" timestamp="1585474821736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="136" y="235" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585257683677" />
+    <state x="136" y="235" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585474821736" />
     <state x="143" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1585473545863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="143" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585473545863" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

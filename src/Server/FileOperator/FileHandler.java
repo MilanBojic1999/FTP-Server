@@ -81,6 +81,14 @@ public class FileHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    public boolean delete(Socket socket,String name){
+        File file;
+        if(name.contains("ServerFiles"))
+            file=new File(name);
+        else
+            file=new File("ServerFiles"+File.separator+name);
+        return file.delete();
     }
 }
