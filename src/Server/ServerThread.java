@@ -101,4 +101,8 @@ public class ServerThread implements Runnable{
             e.printStackTrace();
         }
     }
+
+    public void help(){
+
+    }
 }
