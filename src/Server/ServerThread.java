@@ -61,8 +61,8 @@ public class ServerThread implements Runnable{
             if(renamePro){
                 out.println("Rename commands");
                 if(comm.equalsIgnoreCase("renameto")) {
-                    filler.renameFile(fileName.toString());
                     out.println("Renaming file...");
+                    filler.renameFile(fileName.toString());
                 }else{
                     out.println("Error commands order not supported");
                 }

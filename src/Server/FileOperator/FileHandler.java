@@ -96,7 +96,8 @@ public class FileHandler {
     public void setRename(String rename) {
         if(rename.contains("ServerFiles"))
             this.rename=new File(rename);
-        this.rename=new File("ServerFiles"+File.separator+rename);
+        else
+            this.rename=new File("ServerFiles"+File.separator+rename);
     }
 
     public boolean renameFile(String nname){
