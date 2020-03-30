@@ -52,6 +52,8 @@ public class Client {
                 int size=Integer.parseInt(in.readLine());
                 for(int i=0;i<size;++i)
                     System.out.println("-"+in.readLine());
+            }else if(comms[0].equalsIgnoreCase("renameto")){
+                System.out.println(in.readLine());
             }
 
             System.out.println(msg);

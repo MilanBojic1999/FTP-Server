@@ -14,12 +14,14 @@ public class ServerThread implements Runnable{
     private FileHandler filler;
     private BufferedReader in;
     private PrintWriter out;
+    private boolean renamePro;
 
     public ServerThread(Socket connectSocket,ServerSocket transferSocket, List<User> users) {
         this.connectSocket = connectSocket;
         this.transferSocket = transferSocket;
         this.users = users;
         filler=new FileHandler();
+        renamePro=false;
     }
 
     private boolean connectSocket(Socket socket) throws IOException {
@@ -45,8 +47,7 @@ public class ServerThread implements Runnable{
     }
 
     private boolean transferSocket(Socket socket) throws IOException{
-        //BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        //PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
+
         boolean flag=false;
         do {
             out.println("ftp> ");
@@ -57,6 +58,17 @@ public class ServerThread implements Runnable{
             for(int i=1;i<comms.length;++i)
                 fileName.append(comms[i]);
             System.out.println("Client wants to "+comm);
+            if(renamePro){
+                out.println("Rename commands");
+                if(comm.equalsIgnoreCase("renameto")) {
+                    filler.renameFile(fileName.toString());
+                    out.println("Renaming file...");
+                }else{
+                    out.println("Error commands order not supported");
+                }
+                renamePro=false;
+                continue;
+            }
             switch (comm) {
                 case "get":
                     out.println("Get command");
@@ -80,6 +92,13 @@ public class ServerThread implements Runnable{
                     if (filler.delete(socket,fileName.toString()))
                         System.out.println("File deleted");
                     break;
+                case "renameFrom": case "renamefrom":
+                    out.println("Rename commands");
+                    if(fileName.toString().isEmpty())
+                        continue;
+                    renamePro=true;
+                    filler.setRename(fileName.toString());
+                    break;
                 default:
                     out.println("Unknown command");
             }
@@ -94,7 +113,7 @@ public class ServerThread implements Runnable{
         try{
             if(connectSocket(connectSocket))
                 transferSocket(transferSocket.accept());
-                System.out.println("into de");
+                System.out.println("Client quitting");
             connectSocket.close();
             //transferSocket.close();
         }catch (Exception e){

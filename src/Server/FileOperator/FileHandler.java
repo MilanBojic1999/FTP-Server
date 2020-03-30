@@ -6,6 +6,7 @@ import java.util.List;
 
 public class FileHandler {
     private FileLister lister;
+    private File rename;
 
     public FileHandler() {
         lister=new FileLister();
@@ -90,5 +91,18 @@ public class FileHandler {
         else
             file=new File("ServerFiles"+File.separator+name);
         return file.delete();
+    }
+
+    public void setRename(String rename) {
+        if(rename.contains("ServerFiles"))
+            this.rename=new File(rename);
+        this.rename=new File("ServerFiles"+File.separator+rename);
+    }
+
+    public boolean renameFile(String nname){
+        if(nname.contains("ServerFiles"))
+            return rename.renameTo(new File(nname));
+
+        return rename.renameTo(new File("ServerFiles"+File.separator+nname));
     }
 }
