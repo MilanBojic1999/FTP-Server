@@ -99,6 +99,10 @@ public class ServerThread implements Runnable{
                     renamePro=true;
                     filler.setRename(fileName.toString());
                     break;
+                case "help":
+                    out.println("Help commmands");
+                    help();
+                    break;
                 default:
                     out.println("Unknown command");
             }
@@ -121,6 +125,13 @@ public class ServerThread implements Runnable{
     }
 
     public void help(){
-
+        out.println(7);
+        out.println("-get               -get file from server");
+        out.println("-put <name>        -put your file to server");
+        out.println("-delete <name>     -delete file from server");
+        out.println("-list              -list all servers files");
+        out.println("-renameFrom <name> -select servers file to be renamed, after this renameTo must follow");
+        out.println("-renameTo <name>   -rename already selected servers file");
+        out.println("-quit              -quit connection with the server");
     }
 }

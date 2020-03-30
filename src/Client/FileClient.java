@@ -54,7 +54,8 @@ public class FileClient {
             //Ovde sistem pokušava da napraci novi fajl, ako fajl sa istim imenom postoji
             //Pravi se fajl sa inkrementiranom brojnom vrednošću dodato uz originalno ime
             if(!nFile.createNewFile()) {
-                nFile=new File("ClientsFiles"+File.separator+name+"("+ (i++) +")"+".txt");
+                nFile=new File("ClientsFiles"+File.separator+name+"("+ i +")"+".txt");
+                ++i;
             }
             byte[] inBuff=new byte[(int) size+64];
 
