@@ -115,7 +115,6 @@ public class ServerThread implements Runnable{
                 transferSocket(transferSocket.accept());
                 System.out.println("Client quitting");
             connectSocket.close();
-            //transferSocket.close();
         }catch (Exception e){
             e.printStackTrace();
         }
