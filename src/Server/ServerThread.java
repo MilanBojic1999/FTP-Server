@@ -142,5 +142,6 @@ public class ServerThread implements Runnable{
         out.println("-renameFrom <name> -select servers file to be renamed, after this renameTo must follow");
         out.println("-renameTo <name>   -rename already selected servers file");
         out.println("-quit              -quit connection with the server");
+        out.println("-help              -displays all commands");
     }
 }

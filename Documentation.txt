@@ -1,0 +1,16 @@
+Kako je napravljen ovaj server:
+
+Implementirane komande:
+    *get
+    *put
+    *delete
+    *list
+    *quit
+    *renameFrom
+    *renameTo
+    *help
+
+Ubačeni i nalozi za logovanje na server
+    *Prvobitni korisnik je User(Pera,1234)
+    *Radi i za upisano username: anonymous
+
