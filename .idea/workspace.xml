@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +104,7 @@
       <workItem from="1585677658534" duration="2170000" />
       <workItem from="1585730539811" duration="36000" />
       <workItem from="1585743674679" duration="229000" />
-      <workItem from="1585762896531" duration="212000" />
+      <workItem from="1585762896531" duration="874000" />
     </task>
     <task id="LOCAL-00001" summary="Server class added">
       <created>1584882778960</created>
@@ -331,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585743748715</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Comments added">
+      <created>1585763183740</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1585763183740</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,10 +384,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584883072873" />
-    <state x="206" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585475465283">
+    <state x="206" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585773489996">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="206" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585475465283" />
+    <state x="206" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585773489996" />
     <state x="765" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1585310305518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -394,10 +400,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874957925" />
-    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585743745833">
+    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585763182058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585743745833" />
+    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585763182058" />
     <state x="253" y="385" key="Github.CreatePullRequestDialog" timestamp="1585253205777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -454,10 +460,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="72" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585743751654" />
-    <state x="175" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585762899850">
+    <state x="175" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585773441527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="175" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585762899850" />
+    <state x="175" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585773441527" />
     <state x="289" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585252885953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
