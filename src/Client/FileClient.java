@@ -3,6 +3,9 @@ package Client;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * This class handles file transfer from the client side
+ */
 public class FileClient {
     private Socket socket;
     public FileClient(Socket socket) {

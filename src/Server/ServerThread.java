@@ -7,6 +7,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
 
+/**
+ * ServerThread class is class server used to give every client
+ * uniq thread for usage
+ * It operates with connection socket and transfer socket,
+ * so it operates with commands and transfers of data to/from client
+ */
 public class ServerThread implements Runnable{
     private Socket connectSocket;
     private ServerSocket transferSocket;

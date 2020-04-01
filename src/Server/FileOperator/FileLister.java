@@ -9,6 +9,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * This class handles with command of lisitng all files
+ * within ServerFiles director
+ */
 public class FileLister {
     private List<String> filesNames;
 

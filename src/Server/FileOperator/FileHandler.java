@@ -4,6 +4,10 @@ import java.io.*;
 import java.net.Socket;
 import java.util.List;
 
+/**
+ * This class is directly connected to data transfer and
+ * perform all actions representing command for data transfer
+ */
 public class FileHandler {
     private FileLister lister;
     private File rename;

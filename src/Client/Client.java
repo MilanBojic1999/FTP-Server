@@ -4,6 +4,12 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * This is a small client class, just in use for
+ * testing FTP server and its methods
+ * It connects to Server, gives command to server
+ * and displays recaving messages from server
+ */
 public class Client {
 
     FileClient filler;
@@ -33,8 +39,6 @@ public class Client {
 
         Socket tsocket=new Socket("192.168.1.10",20);
 
-        //BufferedReader tin=new BufferedReader(new InputStreamReader(tsocket.getInputStream()));
-        //PrintWriter tout=new PrintWriter(new OutputStreamWriter(tsocket.getOutputStream()),true);
         filler=new FileClient(tsocket);
         do{
             System.out.print(in.readLine());

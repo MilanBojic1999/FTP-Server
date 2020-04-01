@@ -7,6 +7,11 @@ import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Main Header of whole Server it operates with all regestared users
+ * and all attempts from some client is handeled here
+ * It uses two server sockets, with ports 20 and 21
+ */
 class Server {
 
     private List<User> users;

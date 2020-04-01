@@ -2,6 +2,11 @@ package Server;
 
 import java.util.Objects;
 
+/**
+ * User class is used in server to recognize client
+ * attempts to connect to server
+ * Test object is User("Pera",1234)
+ */
 public class User {
     private String username;
     private String password;
