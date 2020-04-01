@@ -64,6 +64,7 @@ public class ServerThread implements Runnable{
             for(int i=1;i<comms.length;++i)
                 fileName.append(comms[i]);
             System.out.println("Client wants to "+comm);
+
             //Ovde osiguravamo da posle renameFrom komande dolazi
             //renameTo komanda, zarad podržavanja FTP protokola
             if(renamePro){
@@ -77,6 +78,7 @@ public class ServerThread implements Runnable{
                 renamePro=false;
                 continue;
             }
+
             //Ovde vi primamo Klijentske komande i ispunjava ih
             switch (comm) {
                 case "get":

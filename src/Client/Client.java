@@ -15,7 +15,7 @@ public class Client {
     FileClient filler;
 
     public Client() throws Exception{
-        Socket socket=new Socket("192.168.1.10",21);
+        Socket socket=new Socket("192.168.1.8",21);
 
         BufferedReader in=new BufferedReader(new InputStreamReader(socket.getInputStream()));
         PrintWriter out=new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
@@ -37,7 +37,7 @@ public class Client {
         }while (!(msg=in.readLine()).equals("Welcome to server"));
         System.out.println(msg);
 
-        Socket tsocket=new Socket("192.168.1.10",20);
+        Socket tsocket=new Socket("192.168.1.8",20);
 
         filler=new FileClient(tsocket);
         do{
@@ -64,9 +64,8 @@ public class Client {
                     System.out.println(in.readLine());
             }
 
-            System.out.println(msg);
         }while (!msg.equals("Quiting..."));
-
+        System.out.println("Quiting...");
         sc.close();
         tsocket.close();
         socket.close();

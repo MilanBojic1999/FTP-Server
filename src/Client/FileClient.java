@@ -12,24 +12,31 @@ public class FileClient {
         this.socket = socket;
     }
 
-    public boolean send(String filename){
+    public boolean send(String filename) {
 
-        try{
-            File file=new File(filename);
-            byte[] sanding=new byte[(int)file.length()];
+        try {
+            File file;
+            if (filename.contains("ClientsFiles"))
+                file = new File(filename);
+            else
+                file = new File("ClientsFiles" + File.separator + filename);
+            byte[] sanding = new byte[(int) file.length()];
 
-            FileInputStream fis=new FileInputStream(file);
-            BufferedInputStream bis=new BufferedInputStream(fis);
-            bis.read(sanding,0,sanding.length);
+            FileInputStream fis = new FileInputStream(file);
+            BufferedInputStream bis = new BufferedInputStream(fis);
+            bis.read(sanding, 0, sanding.length);
 
-            OutputStream os=socket.getOutputStream();
-            PrintWriter out=new PrintWriter(new BufferedOutputStream(os),true);
+            OutputStream os = socket.getOutputStream();
+            PrintWriter out = new PrintWriter(new BufferedOutputStream(os), true);
             out.println(file.getName());
             out.println(file.length());
-            System.out.println("Sending "+file.getName()+" to "+socket.getInetAddress());
-            os.write(sanding,0,sanding.length);
+            System.out.println("Sending " + file.getName() + " to " + socket.getInetAddress());
+            os.write(sanding, 0, sanding.length);
             os.flush();
-        } catch (IOException e) {
+        }catch (FileNotFoundException e0){
+            System.err.println("No such FILE!!!!");
+            return false;
+        }catch (IOException e) {
             e.printStackTrace();
             return false;
         }

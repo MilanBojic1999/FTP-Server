@@ -3,7 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9db4084b-9095-4d34-aeda-60fed5f84745" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientsFiles/ClientFile11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerFiles/File1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ServerFiles/File1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Client/FileClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Client/FileClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Server/FileOperator/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Server/FileOperator/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Server/FileOperator/FileLister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Server/FileOperator/FileLister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Server/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Server/ServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTP-Server/Server/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTP-Server/Server/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/FileClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/FileClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +118,7 @@
       <workItem from="1585730539811" duration="36000" />
       <workItem from="1585743674679" duration="229000" />
       <workItem from="1585762896531" duration="874000" />
-      <workItem from="1585773441994" duration="383000" />
+      <workItem from="1585773441994" duration="3704000" />
     </task>
     <task id="LOCAL-00001" summary="Server class added">
       <created>1584882778960</created>
@@ -347,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585773524946</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Documentation is added">
+      <created>1585773843025</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1585773843025</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,17 +405,18 @@
     <MESSAGE value="Help command implemented" />
     <MESSAGE value="minor fixes" />
     <MESSAGE value="Comments added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comments added" />
+    <MESSAGE value="Documentation is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation is added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584883072873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584883072873" />
-    <state x="206" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585773489996">
+    <state x="206" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585775683923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="206" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585773489996" />
+    <state x="206" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585775683923" />
     <state x="765" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1585310305518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -410,46 +429,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874957925" />
-    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585773523247">
+    <state x="422" y="23" key="CommitChangelistDialog2" timestamp="1585773842188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585773523247" />
+    <state x="422" y="23" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585773842188" />
     <state x="253" y="385" key="Github.CreatePullRequestDialog" timestamp="1585253205777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="253" y="385" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585253205777" />
-    <state width="1876" height="276" key="GridCell.Tab.0.bottom" timestamp="1585567791571">
+    <state width="1876" height="276" key="GridCell.Tab.0.bottom" timestamp="1585777192239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585567791571" />
-    <state width="1876" height="276" key="GridCell.Tab.0.center" timestamp="1585567791571">
+    <state width="1876" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585777192239" />
+    <state width="1876" height="276" key="GridCell.Tab.0.center" timestamp="1585777192239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585567791571" />
-    <state width="1876" height="276" key="GridCell.Tab.0.left" timestamp="1585567791571">
+    <state width="1876" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585777192239" />
+    <state width="1876" height="276" key="GridCell.Tab.0.left" timestamp="1585777192239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585567791571" />
-    <state width="1876" height="276" key="GridCell.Tab.0.right" timestamp="1585567791571">
+    <state width="1876" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585777192239" />
+    <state width="1876" height="276" key="GridCell.Tab.0.right" timestamp="1585777192239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585567791571" />
-    <state width="900" height="335" key="GridCell.Tab.1.bottom" timestamp="1585476583046">
+    <state width="1876" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585777192239" />
+    <state width="1876" height="341" key="GridCell.Tab.1.bottom" timestamp="1585777185088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="335" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585476583046" />
-    <state width="900" height="335" key="GridCell.Tab.1.center" timestamp="1585476583046">
+    <state width="1876" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585777185088" />
+    <state width="1876" height="341" key="GridCell.Tab.1.center" timestamp="1585777185088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="335" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585476583046" />
-    <state width="900" height="335" key="GridCell.Tab.1.left" timestamp="1585476583046">
+    <state width="1876" height="341" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585777185088" />
+    <state width="1876" height="341" key="GridCell.Tab.1.left" timestamp="1585777185088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="335" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585476583046" />
-    <state width="900" height="335" key="GridCell.Tab.1.right" timestamp="1585476583046">
+    <state width="1876" height="341" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585777185088" />
+    <state width="1876" height="341" key="GridCell.Tab.1.right" timestamp="1585777185088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="900" height="335" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585476583046" />
+    <state width="1876" height="341" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585777185088" />
     <state width="900" height="271" key="GridCell.Tab.2.bottom" timestamp="1585475761984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -466,10 +485,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="900" height="271" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585475761984" />
-    <state x="72" y="251" key="Vcs.Push.Dialog.v2" timestamp="1585743751654">
+    <state x="72" y="251" key="Vcs.Push.Dialog.v2" timestamp="1585773845933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585743751654" />
+    <state x="72" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585773845933" />
     <state x="175" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585773441527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -478,6 +497,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="289" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585252885953" />
+    <state x="522" y="254" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585777069156">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="522" y="254" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1585777069156" />
     <state x="210" y="284" key="extract.method.dialog" timestamp="1585315379909">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -494,5 +517,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="143" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585773544241" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Client/FileClient.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Server/FileOperator/FileHandler.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -34,8 +34,10 @@ public class FileHandler {
             BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(inFile));
 
             byteRead=is.read(inBuff,0,inBuff.length);
+
             bos.write(inBuff,0,byteRead);
             bos.flush();
+
             System.out.println("Writen into file "+inFile.getName());
 
         } catch (IOException e) {
@@ -90,6 +92,7 @@ public class FileHandler {
 
     public boolean delete(Socket socket,String name){
         File file;
+        System.out.println(name);
         if(name.contains("ServerFiles"))
             file=new File(name);
         else
