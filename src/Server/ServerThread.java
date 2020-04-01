@@ -31,7 +31,7 @@ public class ServerThread implements Runnable{
     }
 
     private boolean connectSocket(Socket socket) throws IOException {
-
+        //Prijavljanje korsnika na FTP server
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
         out.println("Log in please!!!");
@@ -64,6 +64,8 @@ public class ServerThread implements Runnable{
             for(int i=1;i<comms.length;++i)
                 fileName.append(comms[i]);
             System.out.println("Client wants to "+comm);
+            //Ovde osiguravamo da posle renameFrom komande dolazi
+            //renameTo komanda, zarad podržavanja FTP protokola
             if(renamePro){
                 out.println("Rename commands");
                 if(comm.equalsIgnoreCase("renameto")) {
@@ -75,6 +77,7 @@ public class ServerThread implements Runnable{
                 renamePro=false;
                 continue;
             }
+            //Ovde vi primamo Klijentske komande i ispunjava ih
             switch (comm) {
                 case "get":
                     out.println("Get command");
