@@ -138,7 +138,7 @@ public class ServerThread implements Runnable{
 
     public void help(){
         out.println(8);
-        out.println("-get               -get file from server");
+        out.println("-get               -get file froKm server");
         out.println("-put <name>        -put your file to server");
         out.println("-delete <name>     -delete file from server");
         out.println("-list              -list all servers files");
