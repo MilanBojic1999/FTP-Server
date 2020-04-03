@@ -79,7 +79,7 @@ public class ServerThread implements Runnable{
                 continue;
             }
 
-            //Ovde vi primamo Klijentske komande i ispunjava ih
+            //Ovde primamo Klijentske komande i ispunjava ih
             switch (comm) {
                 case "get":
                     out.println("Get command");
@@ -119,6 +119,7 @@ public class ServerThread implements Runnable{
             }
 
         } while (!flag);
+        //zatvaramo port za transfer podataka
         socket.close();
         return false;
     }
@@ -136,7 +137,7 @@ public class ServerThread implements Runnable{
     }
 
     public void help(){
-        out.println(7);
+        out.println(8);
         out.println("-get               -get file from server");
         out.println("-put <name>        -put your file to server");
         out.println("-delete <name>     -delete file from server");

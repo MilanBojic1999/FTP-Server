@@ -1,10 +1,12 @@
 package Server.FileOperator;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -21,12 +23,17 @@ public class FileLister {
     }
 
     public List<String> listFiles(){
-        try (Stream<Path> walk= Files.walk(Paths.get("ServerFiles"))){
+        /*try (Stream<Path> walk= Files.walk(Paths.get("ServerFiles"))){
             filesNames=walk.map(Path::toString).collect(Collectors.toList());
         }catch (IOException e){
             e.printStackTrace();
-        }
+        }*/
+        File file=new File("ServerFiles");
+        String[] names;
+        names=file.list();
+        assert names != null;
 
-        return filesNames;
+        return Arrays.asList(names);
+
     }
 }

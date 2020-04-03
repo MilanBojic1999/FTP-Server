@@ -13,24 +13,36 @@ public class FileClient {
     }
 
     public boolean send(String filename) {
-
+        System.out.println("-->"+filename);
         try {
             File file;
-            if (filename.contains("ClientsFiles"))
+            OutputStream os = socket.getOutputStream();
+            PrintWriter out = new PrintWriter(new BufferedOutputStream(os), true);
+
+
+            if (filename.contains("ClientsFiles")) {
                 file = new File(filename);
-            else
-                file = new File("ClientsFiles" + File.separator + filename);
+            }
+            else {
+                file = new File("ClientsFiles"+File.separator+filename);
+            }
+
+            //Proveravamo da li traženi fajl postoji u sistemu
+            if(!file.exists()) {
+                System.err.println("Fajl ne postoji za slanje");
+                out.println("NULL");
+                return false;
+            }
+
             byte[] sanding = new byte[(int) file.length()];
 
             FileInputStream fis = new FileInputStream(file);
             BufferedInputStream bis = new BufferedInputStream(fis);
             bis.read(sanding, 0, sanding.length);
 
-            OutputStream os = socket.getOutputStream();
-            PrintWriter out = new PrintWriter(new BufferedOutputStream(os), true);
             out.println(file.getName());
             out.println(file.length());
-            System.out.println("Sending " + file.getName() + " to " + socket.getInetAddress());
+            System.out.println("Sending " + file.getName() + " to server");
             os.write(sanding, 0, sanding.length);
             os.flush();
         }catch (FileNotFoundException e0){
@@ -51,23 +63,28 @@ public class FileClient {
 
             //Dobijanje meta podataka o fajlu
             String fullname=in.readLine();
+
+            //Proveravamo da li je server sadrži traženi fajl
+            if(fullname.equals("NULL")) {
+                System.err.println("Fajl nije primljen");
+                return false;
+            }
             long size=Long.parseLong(in.readLine());
-            String[] fullnameParts=fullname.split("/"); //deli dobijenu putanju na imenea direktorijuma
-            String name=fullnameParts[fullnameParts.length-1]; // ovo je poslednji deo putanje, odnosno ime fajla
 
 
             System.out.println("Getting File: "+fullname+" with size: "+size+" bytes");
             File nFile;
-            nFile=new File("ClientsFiles"+File.separator+name);
+            nFile=new File("ClientsFiles"+File.separator+fullname);
 
             int i=1;
             //Ovde sistem pokušava da napraci novi fajl, ako fajl sa istim imenom postoji
             //Pravi se fajl sa inkrementiranom brojnom vrednošću dodato uz originalno ime
             if(!nFile.createNewFile()) {
-                nFile=new File("ClientsFiles"+File.separator+name+"("+ i +")"+".txt");
+                nFile=new File("ClientsFiles"+File.separator+"F"+i+fullname);
                 ++i;
             }
             byte[] inBuff=new byte[(int) size+64];
+
 
             BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(nFile));
 
@@ -75,6 +92,9 @@ public class FileClient {
             byteRead=is.read(inBuff,0,inBuff.length);
             bos.write(inBuff,0,byteRead);
             bos.flush();
+
+            //Zatvaram strimove
+            bos.close();
             System.out.println("Writen into file "+nFile.getName());
         } catch (IOException e) {
             e.printStackTrace();

@@ -21,6 +21,13 @@ public class FileHandler {
             InputStream is=socket.getInputStream();
             BufferedReader in=new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String name=in.readLine();
+
+            //Proverava da li fajl koji se delefirao za prenos postoji kod klijenta
+            if(name.equals("NULL")) {
+                System.err.println("Fajl nije primljen");
+                return false;
+            }
+
             int size=Integer.parseInt(in.readLine());
             System.out.println("Getting File: "+name+" with size: "+size+" bytes");
             File inFile=new File("ServerFiles"+File.separator+name);
@@ -49,27 +56,38 @@ public class FileHandler {
 
     public boolean get(Socket socket,String name){
         try{
+
             File file;
-            if(name.split("/").length<2)
-                file=new File("ServerFiles"+File.separator+name);
+            if (name.startsWith("ServerFiles"))
+                file = new File(name);
             else
-                file=new File(name);
+                file = new File("ServerFiles"+File.separator+name);
             System.out.println(file.getAbsoluteFile());
-            if(!file.exists())
-                return false;
             byte[] sanding=new byte[(int)file.length()];
+
+            OutputStream os=socket.getOutputStream();
+            PrintWriter out=new PrintWriter(new BufferedOutputStream(os),true);
+
+            //Proveravamo da li traženi fajl postoji u sistemu
+            if(!file.exists()) {
+                System.err.println("Traženi fajl ne postoji");
+                out.println("NULL");
+                return false;
+            }
+
 
             FileInputStream fis=new FileInputStream(file);
             BufferedInputStream bis=new BufferedInputStream(fis);
             bis.read(sanding,0,sanding.length);
 
-            OutputStream os=socket.getOutputStream();
-            PrintWriter out=new PrintWriter(new BufferedOutputStream(os),true);
+
             out.println(file.getName());
             out.println(file.length());
-            System.out.println("Sending "+file.getName()+" to "+socket.getInetAddress());
+            System.out.println("Sending "+file.getName()+" to "+socket.getInetAddress().getHostName());
             os.write(sanding,0,sanding.length);
             os.flush();
+
+            bis.close();
         } catch (IOException e) {
             e.printStackTrace();
             return false;
