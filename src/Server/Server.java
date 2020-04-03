@@ -15,7 +15,6 @@ import java.util.List;
 class Server {
 
     private List<User> users;
-    private FileLister lister;
 
     public Server() throws Exception{
         utilInit();
@@ -37,7 +36,6 @@ class Server {
     private void utilInit(){
         users=new ArrayList<>();
         users.add(new User("Pera","1234"));
-        lister=new FileLister();
     }
 
     public static void main(String[] args) {
