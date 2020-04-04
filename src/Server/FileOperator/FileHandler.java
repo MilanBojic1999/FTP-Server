@@ -28,7 +28,7 @@ public class FileHandler {
                 return false;
             }
 
-            int size=Integer.parseInt(in.readLine());
+            long size=Integer.parseInt(in.readLine());
             System.out.println("Getting File: "+name+" with size: "+size+" bytes");
             File inFile=new File("ServerFiles"+File.separator+name);
             if(!inFile.createNewFile())
@@ -36,7 +36,7 @@ public class FileHandler {
 
             int byteRead;
 
-            byte[] inBuff=new byte[size+32];
+            byte[] inBuff=new byte[(int)size];
 
             BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(inFile));
 

@@ -83,7 +83,7 @@ public class FileClient {
                 nFile=new File("ClientsFiles"+File.separator+"F"+i+fullname);
                 ++i;
             }
-            byte[] inBuff=new byte[(int) size+64];
+            byte[] inBuff=new byte[(int) size];
 
 
             BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(nFile));
