@@ -14,3 +14,7 @@ Ubačeni i nalozi za logovanje na server
     *Prvobitni korisnik je User(Pera,1234)
     *Radi i za upisano username: anonymous
 
+Rad sa fajlovima :
+    Radi samo sa fajlovima iz projektnih foldera(ClientsFiles i ServerFiles)
+    Za pravilno učitavanje fajla klijent treba da samo ime Fajla iz potrebnog foldera npr. Fajl1.txt
+

@@ -3180,14 +3180,6 @@ File Transfer Protocol
 
 
 
-
-
-
-
-
-
-
-
 Postel & Reynolds                                              [Page 56]
 
 
@@ -3235,16 +3227,6 @@ File Transfer Protocol
 
 
 
-
-
-
-
-
-
-
-
-
-
 Postel & Reynolds                                              [Page 57]
 
 
@@ -3277,24 +3259,6 @@ File Transfer Protocol
               |
               V
              End
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3669,38 +3633,6 @@ File Transfer Protocol
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Postel & Reynolds                                              [Page 65]
 
 
@@ -3858,16 +3790,6 @@ File Transfer Protocol
 
    Padlipsky, Michael, "FTP Unique-Named Store Command", RFC 949, MITRE,
    July 1985.
-
-
-
-
-
-
-
-
-
-
 
 
 

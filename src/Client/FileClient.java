@@ -45,6 +45,7 @@ public class FileClient {
             System.out.println("Sending " + file.getName() + " to server");
             os.write(sanding, 0, sanding.length);
             os.flush();
+            os.close();
         }catch (FileNotFoundException e0){
             System.err.println("No such FILE!!!!");
             return false;
@@ -89,8 +90,13 @@ public class FileClient {
             BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(nFile));
 
             int byteRead;
-            byteRead=is.read(inBuff,0,inBuff.length);
-            bos.write(inBuff,0,byteRead);
+            int current=0;
+            do {
+                System.out.println("-->"+current);
+                byteRead = is.read(inBuff, current, inBuff.length-current);
+                if(byteRead>=0) current+=byteRead;
+            }while(byteRead>0);
+            bos.write(inBuff,0,current);
             bos.flush();
 
             //Zatvaram strimove

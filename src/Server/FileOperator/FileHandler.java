@@ -27,26 +27,33 @@ public class FileHandler {
                 System.err.println("Fajl nije primljen");
                 return false;
             }
-
-            long size=Integer.parseInt(in.readLine());
+            String mmm=in.readLine();
+            System.out.println("**"+mmm);
+            long size=Long.parseLong(mmm);
             System.out.println("Getting File: "+name+" with size: "+size+" bytes");
             File inFile=new File("ServerFiles"+File.separator+name);
             if(!inFile.createNewFile())
                 System.out.println("Overwriting file");
 
-            int byteRead;
 
-            byte[] inBuff=new byte[(int)size];
+            byte[] inBuff=new byte[(int) size];
 
             BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(inFile));
 
-            byteRead=is.read(inBuff,0,inBuff.length);
 
-            bos.write(inBuff,0,byteRead);
+            int byteRead;
+            int current=0;
+            do {
+                System.out.println("-->"+current);
+                byteRead = is.read(inBuff, current, inBuff.length-current);
+                if(byteRead>=0) current+=byteRead;
+            }while(byteRead>0);
+
+            bos.write(inBuff,0,current);
             bos.flush();
 
             System.out.println("Writen into file "+inFile.getName());
-
+            bos.close();
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -78,8 +85,8 @@ public class FileHandler {
 
             FileInputStream fis=new FileInputStream(file);
             BufferedInputStream bis=new BufferedInputStream(fis);
-            bis.read(sanding,0,sanding.length);
-
+            int inn=bis.read(sanding,0,sanding.length);
+            System.err.println(inn);
 
             out.println(file.getName());
             out.println(file.length());

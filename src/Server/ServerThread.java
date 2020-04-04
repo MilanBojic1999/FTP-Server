@@ -60,6 +60,7 @@ public class ServerThread implements Runnable{
             String info = in.readLine();
             String[] comms=info.split(" ");
             String comm=comms[0];
+            //Ako neka komanda ima drugi argument Fajl ovde parsujemo putanju
             StringBuilder fileName= new StringBuilder();
             for(int i=1;i<comms.length;++i)
                 fileName.append(comms[i]);
@@ -80,6 +81,7 @@ public class ServerThread implements Runnable{
             }
 
             //Ovde primamo Klijentske komande i ispunjava ih
+            //Idemo sve dok client ne kaže quit
             switch (comm) {
                 case "get":
                     out.println("Get command");
@@ -119,6 +121,7 @@ public class ServerThread implements Runnable{
             }
 
         } while (!flag);
+
         //zatvaramo port za transfer podataka
         socket.close();
         return false;
